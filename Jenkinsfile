@@ -11,6 +11,7 @@ pipeline {
             // }
             steps {
                 script {
+                  echo env
                   if (env.CHANGE_ID) {
                     for (commit in pullRequest.commits) {
                       echo "hih"
