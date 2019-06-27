@@ -8,7 +8,9 @@ pipeline {
         stage('First') {
             steps {
                 script {
-                    echo pullRequest
+                    for (commit in pullRequest.commits) {
+                      echo "SHA: ${commit.sha}, Committer: ${commit.committer}, Commit Message: ${commit.message}"
+                    }
                 }
             }
         }
