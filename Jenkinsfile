@@ -6,9 +6,9 @@ pipeline {
     }
     stages {
         stage('First') {
-            when {
-                changeRequest()
-            }
+            // when {
+            //     changeRequest()
+            // }
             steps {
                 script {
                   if (env.CHANGE_ID) {
