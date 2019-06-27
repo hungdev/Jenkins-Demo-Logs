@@ -6,7 +6,6 @@ pipeline {
     }
     stages {
         stage('First') {
-            steps {
                 script {
                   if (env.CHANGE_ID) {
                     for (commit in pullRequest.commits) {
@@ -15,7 +14,6 @@ pipeline {
                     }
                     }
                 }
-            }
         }
     }
 }
