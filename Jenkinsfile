@@ -10,6 +10,9 @@ pipeline {
             //     changeRequest()
             // }
             steps {
+              sh 'echo $CHANGE_ID'
+              sh "echo \$CHANGE_ID"
+              sh "echo ${env.CHANGE_ID}"
                 script {
                   echo "zzzzz: ${env.CHANGE_ID}"
                   if (env.CHANGE_ID) {
