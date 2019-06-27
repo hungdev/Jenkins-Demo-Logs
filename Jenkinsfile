@@ -9,6 +9,7 @@ pipeline {
             steps {
                 script {
                     for (commit in pullRequest.commits) {
+                      echo "hih"
                       echo "SHA: ${commit.sha}, Committer: ${commit.committer}, Commit Message: ${commit.message}"
                     }
                 }
