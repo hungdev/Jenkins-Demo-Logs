@@ -8,7 +8,7 @@ pipeline {
         stage('First') {
             steps {
                 script {
-                    echo "ahhhhs"
+                    echo pullRequest
                 }
             }
         }
